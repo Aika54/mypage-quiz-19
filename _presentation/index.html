@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyPage</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  
+  <!-- Login画面?? -->
+  <section id="welcome-screen" class="welcome-screen">
+    <div class="welcome-card">
+      <h1>Welcome to MyPage!</h1>
+
+      <form id="login-form">
+        <label for="nickname">ニックネーム</label>
+        <input
+          type="text"
+          id="nickname"
+          placeholder="名前を入力してください"
+          maxlength="30"
+          required
+        >
+        <button type="submit" class="primary-button">
+          Login ✨
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Loginした後　MyPage本体 -->
+  <main id="mypage" class="mypage hidden">
+    
+    <!-- ヘッダー要素 -->
+    <header class="topbar">
+      <!-- ＃　ページの先頭へ遷移 -->
+      <a href="#" class="logo">✦ MyPage.</a>
+      <button id="logout-button" class="text-button">
+        退出する ↗
+      </button>
+    </header>
+
+    <section class="hero">
+      <h2>WELCOME TO MY PAGE</h2>
+      <h1>Hello, <span id="display-name">Guest</span>! </h1>
+    </section>
+
+    <!-- プロフィール -->
+    <section class="profile-section">
+      <!-- アイコンと名前？ -->
+      <div class="profile-heading">
+        <div class="avatar"><img src="../pictures/Icon.JPEG" alt="自己紹介の画像です" width="90" heigth="90"></div>
+        <div>
+          <h2 id="profile-name">Your Name</h2>
+        </div>
+      </div>
+
+      <!-- 自分の情報を載せる部分 -->
+      <div class="aboutme">
+        <h3>About Me</h3>
+        <div class="profile-grid">
+          <div class="info-myself">
+            <span>🎂 Birthday</span>
+            <strong>2003年5月4日</strong>
+          </div>
+          <div class="info-myself">
+            <span>🐸 MBTI</span>
+            <strong>ENFP</strong>
+          </div>
+          <div class="info-myself">
+            <span>🏙 Place</span>
+            <strong>愛知</strong>
+          </div>
+          <div class="info-myself">
+            <span>💠 Favorite 💠</span>
+            <strong>アニメ・料理</strong>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- オプション -->
+    <section class="content-section">
+      <h2>My Learning 📚</h2>
+
+      <div class="menu-grid">
+        <a href="quiz.html" class="menu-card lavender">
+          <span class="menu-icon">💻</span>
+          <h3>Quiz Game</h3>
+          <p>JavaScript・HTML・CSSに関するクイズにチャレンジしよう</p>
+        </a>
+
+        <a href="quiz.html" class="menu-card blue">
+          <span class="menu-icon">🍀</span>
+          <h3>Today's Fortune</h3>
+          <p>今日の運勢を占ってみよう🔮</p>
+        </a>
+
+      </div>
+    </section>
+
+    <footer>
+      MY PAGE · LEARN · FORTUNE
+    </footer>
+  </main>
+</body>
+
+</html>
