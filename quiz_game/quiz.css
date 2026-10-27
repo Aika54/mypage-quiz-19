@@ -1,0 +1,210 @@
+.custom-line {
+    border-top: 2px solid var(--purple);
+    margin: 20px auto;
+    /* 上下に余白を開け、中央寄せにする */
+}
+
+
+/* クイズ画面全体 */
+.quiz-container {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 24px;
+    box-sizing: border-box;
+}
+
+/* クイズタイトル・問題数 */
+.quiz-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 28px;
+}
+
+/* クイズタイトル */
+.quiz-theme {
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--purple-dark);
+}
+
+.quiz-theme p {
+    margin: 8px 0 0;
+    font-size: 18px;
+    font-weight: normal;
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+/* 問題数 */
+.quiz-nums {
+    padding: 10px 16px;
+    border-radius: 20px;
+    background: var(--lavender);
+    color: var(--purple-dark);
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* 問題・選択肢エリア */
+.quiz-main {
+    padding: 32px;
+    background: var(--white);
+    border: 1px solid var(--lavender);
+    border-radius: 20px;
+    box-shadow: 0 4px 16px rgba(80, 50, 120, 0.06);
+}
+
+#current-nums {
+    max-width: 140px;
+    margin: 0 auto;
+    margin-bottom: 16px;
+}
+
+
+/* 問題文 */
+.current-question {
+    min-height: 60px;
+    margin: 0 0 28px;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.8;
+    color: var(--text);
+    text-align: center;
+    white-space: pre-line;
+    text-align: left;  
+}
+
+/* 選択肢一覧 */
+.choices {
+    display: grid;
+    gap: 14px;
+}
+
+/* 各選択肢 */
+.choice {
+    width: 100%;
+    padding: 16px 18px;
+    border: 3px solid var(--lavender);
+    border-radius: 12px;
+    background: var(--white);
+    color: var(--text);
+    font-size: 15px;
+    text-align: left;
+    cursor: pointer;
+    transition: background 0.2s, border-color 0.2s;
+    text-align: center;
+}
+
+/* 選択肢のホバー*/
+.choice:hover {
+    background: var(--lavender);
+    border-color: var(--purple);
+}
+
+/* 選択中の選択肢→JSでselectedクラスを付ける*/
+.choice.selected {
+    background: var(--lavender);
+    border: 2px solid var(--purple);
+    padding: 15px 17px;
+}
+
+
+/* 回答ボタン */
+.submit {
+    display: block;
+    width: 100%;
+    margin-top: 28px;
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    background: var(--purple);
+    color: var(--white);
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+/* 解説の部分 */
+#feedback {
+    margin-top: 28px;
+}
+
+/* 正誤メッセージ */
+#result-message {
+    margin: 0 0 20px;
+    font-size: 26px;
+    text-align: center;
+}
+
+
+/* 解説カード */
+.explanation-card.correct{
+    color: #24945A;
+    background: #d2fee8;
+
+    padding: 20px;
+    margin-bottom: 24px;
+    border-radius: 14px;
+    text-align: left;
+}
+
+.explanation-card.incorrect{
+    color: #D94B4B;
+    background: #ffdada;
+
+    padding: 20px;
+    margin-bottom: 24px;
+    border-radius: 14px;
+    text-align: left;
+}
+
+/* 解説の見出し */
+.explanation-card strong {
+    /* color: var(--purple-dark); */
+    font-size: 18px;
+}
+
+/* 解説本文 */
+#explanation-text {
+    margin: 12px 0 0;
+    color: var(--text);
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.submit:hover {
+    background: var(--purple-dark);
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* 結果画面 */
+#result-screen {
+    text-align: center;
+    margin: 0 auto 28px;
+}
+
+#final-score {
+    font-size: 42px;
+    font-weight: 500; 
+        line-height: 1.4;
+}
+
+.result-line {
+    border-top: 2px dashed var(--purple);
+    margin: 0;
+}
+
+#final-comment{
+    margin: 20px 0 0;
+    color: var(--text);
+    font-size: 18px;
+    white-space: pre-line;
+}

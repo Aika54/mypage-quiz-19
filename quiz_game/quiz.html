@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="quiz.css">
+    <script src="questions.js" defer></script>
+    <script src="quiz.js" defer></script>
+</head>
+
+<body>
+    <main class="quiz-container">
+        <!-- ヘッダー要素 -->
+        <header class="topbar">
+            <!-- ＃　ページの先頭へ遷移 -->
+            <a href="#" class="logo">✦ MyPage.</a>
+            <a href="index.html" class="text-button">←マイページへ</a>
+        </header>
+        <hr class="custom-line">
+
+        <section class="quiz-top">
+            <!-- お題 -->
+            <div class="quiz-theme">
+                Programming Quiz
+                <p>HTML・CSS・JavaScriptの問題にチャレンジしよう！</p>
+            </div>
+            <!-- 問題数 -->
+            <div class="quiz-nums">
+                問題数：　10問
+            </div>
+        </section>
+
+        <!-- クイズの表示画面 -->
+        <section class="quiz-main">
+            <div class="quiz-nums" id="current-nums">
+                /10 問目
+            </div>
+            <div class="current-question" id="current-question">
+            </div>
+            <div class="choices" id="choices">
+                <button class="choice" type="button" data-index="0">① |</button>
+                <button class="choice" type="button" data-index="1">② |</button>
+                <button class="choice" type="button" data-index="2">③ |</button>
+                <button class="choice" type="button" data-index="3">④ |</button>
+            </div>
+            <div id="feedback" class="hidden">
+                <h2 id="result-message"></h2>
+                <div class="explanation-card">
+                    <p><strong>解説</strong></p>
+                    <p id="explanation-text"></p>
+                </div>
+                <button class="submit" type="button" id="next-button">
+                    次の問題へ
+                </button>
+            </div>
+            <button class="submit" type="button" id="submit-button">
+                回答する
+            </button>
+        </section>
+
+        <!-- 結果画面：最初は非表示 -->
+        <section id="result-screen" class="quiz-main">
+            <h2 class="quiz-nums">クイズ結果！</h2>
+            <div class="result-card">
+                <p><strong>あなたのスコア</strong></p>
+                <p id="final-score"></p>
+                <hr class="result-line">
+                <p id="final-comment"></p>
+            </div>
+
+            <button class="submit" type="button" id="retry-button">
+                もう一度挑戦する
+            </button>
+        </section>
+
+    </main>
+</body>
